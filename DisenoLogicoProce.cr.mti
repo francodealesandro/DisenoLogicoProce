@@ -1,0 +1,32 @@
+{D:/vhDL Procesador/Proc.vhd} {0 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Proc.vhd}
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Proc
+-- Compiling architecture Beh_Proc of Proc
+** Error: D:\vhDL Procesador\Proc.vhd(71): (vcom-1136) Unknown identifier "din".
+** Error: D:\vhDL Procesador\Proc.vhd(71): (vcom-1136) Unknown identifier "dout".
+** Error: D:\vhDL Procesador\Proc.vhd(73): near ")": syntax error
+** Error: D:\vhDL Procesador\Proc.vhd(76): Statement cannot be labeled.
+** Error: D:\vhDL Procesador\Proc.vhd(76): near ")": syntax error
+** Error: D:\vhDL Procesador\Proc.vhd(79): Statement cannot be labeled.
+** Error: D:\vhDL Procesador\Proc.vhd(79): near ")": syntax error
+** Error: D:\vhDL Procesador\Proc.vhd(112): VHDL Compiler exiting
+
+} {8.0 16.0} {}} {D:/vhDL Procesador/Regs.vhd} {0 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Regs.vhd}
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity regs
+-- Compiling architecture registers_table_arq of regs
+** Error: D:\vhDL Procesador\Regs.vhd(23): (vcom-1136) Unknown identifier "reset".
+** Error: D:\vhDL Procesador\Regs.vhd(23): Expression is not a signal.
+** Error: D:\vhDL Procesador\Regs.vhd(25): (vcom-1136) Unknown identifier "reset".
+** Error: D:\vhDL Procesador\Regs.vhd(25): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+** Error: D:\vhDL Procesador\Regs.vhd(31): (vcom-1136) Unknown identifier "conv_integer".
+** Error: D:\vhDL Procesador\Regs.vhd(36): (vcom-1136) Unknown identifier "conv_integer".
+** Error: D:\vhDL Procesador\Regs.vhd(39): VHDL Compiler exiting
+
+} {8.0 15.0} {}}

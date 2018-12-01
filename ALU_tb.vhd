@@ -1,35 +1,35 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.std_logic_unsigned.all;
-USE ieee.numeric_std.ALL;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
-ENTITY ALU_tb IS
-END ALU_tb;
+entity ALU_tb is
+end ALU_tb;
 
-ARCHITECTURE behavior OF ALU_tb IS 
+architecture behavior of ALU_tb is 
 
-	COMPONENT ALU
-	PORT(
+	component ALU
+	port(
 		    A, B : in  STD_LOGIC_VECTOR (7 downto 0);
         S : out  STD_LOGIC_VECTOR (7 downto 0);
         op : in  STD_LOGIC_VECTOR (2 downto 0)
 		);
-	END COMPONENT;
+	end component;
 
 	-- Señales de estímulo
-	SIGNAL A :  std_logic_vector(7 downto 0) := "10000000";
-	SIGNAL B :  std_logic_vector(7 downto 0) := "00000001";
-  SIGNAL op : std_logic_vector(2 downto 0) := "000";
+	signal A :  std_logic_vector(7 downto 0) := "10000000";
+	signal B :  std_logic_vector(7 downto 0) := "00000001";
+  signal op : std_logic_vector(2 downto 0) := "000";
   
 	-- Señales a observar
-	SIGNAL S:  std_logic_vector(7 downto 0);
+	signal S:  std_logic_vector(7 downto 0);
 
-  constant delay: time:= 7 ns;
+  constant delay: time:= 10 ns;
 
-BEGIN
+begin
 
 	-- Instantiate the Unit Under Test (UUT)
-	uut: ALU PORT MAP(
+	uut: ALU port map(
 		A => A,
 		B => B,
 		S => S,
@@ -39,9 +39,11 @@ BEGIN
    POP: process 
    begin
       op <= op + 1; 
-      wait for delay;
+      if (op = "000") then
+        wait;
+      else
+        wait for delay;
+      end if;
    end process; 
 
-END;
-
-
+end;
