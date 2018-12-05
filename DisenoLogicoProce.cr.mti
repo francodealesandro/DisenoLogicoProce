@@ -14,22 +14,17 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 ** Error: D:/vhDL Procesador/Proc.vhd(79): near ")": syntax error
 ** Error: D:/vhDL Procesador/Proc.vhd(112): VHDL Compiler exiting
 
-} {8.0 16.0} {}} {D:/vhDL Procesador/Regs.vhd} {0 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Regs.vhd}
+} {8.0 16.0} {}} {D:/vhDL Procesador/Regs.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Regs.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity regs
 -- Compiling architecture registers_table_arq of regs
-** Error: D:/vhDL Procesador/Regs.vhd(23): (vcom-1136) Unknown identifier "reset".
-** Error: D:/vhDL Procesador/Regs.vhd(23): Expression is not a signal.
-** Error: D:/vhDL Procesador/Regs.vhd(25): (vcom-1136) Unknown identifier "reset".
-** Error: D:/vhDL Procesador/Regs.vhd(25): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
-** Error: D:/vhDL Procesador/Regs.vhd(31): (vcom-1136) Unknown identifier "conv_integer".
-** Error: D:/vhDL Procesador/Regs.vhd(36): (vcom-1136) Unknown identifier "conv_integer".
-** Error: D:/vhDL Procesador/Regs.vhd(39): VHDL Compiler exiting
 
-} {8.0 15.0} {}} {D:/vhDL Procesador/ALU.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ALU.vhd}
+} {} {}} {D:/vhDL Procesador/ALU.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ALU.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -39,7 +34,7 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Compiling entity ALU
 -- Compiling architecture alu_arq of ALU
 
-} {} {}} {D:/vhDL Procesador/ALU_tb.vhd} {2 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ALU_tb.vhd}
+} {} {}} {D:/vhDL Procesador/ALU_tb.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ALU_tb.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -49,6 +44,5 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package NUMERIC_STD
 -- Compiling entity ALU_tb
 -- Compiling architecture behavior of ALU_tb
-** Warning: [2] D:/vhDL Procesador/ALU_tb.vhd(48): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
 
 } {} {}}

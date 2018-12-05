@@ -21,7 +21,7 @@ begin
   sync: process(clk)
 	begin
 	  if rst = '1' then
-	    S <= (others => '0')
+	    S <= (others => '0');
 		elsif (rising_edge(clk)) then
 			S <= next_state;
 		end if;
@@ -44,7 +44,7 @@ begin
       when "101" =>
         next_state <= A or B;
       when "110" =>
-        next_state <= A xor B;
+        next_state <= A and B;
       when "111" =>
         --next_state <= A srl 1;
         next_state <= '0' & A(7 downto 1);

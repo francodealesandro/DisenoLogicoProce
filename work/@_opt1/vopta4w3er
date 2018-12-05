@@ -12,15 +12,15 @@ Z5 n@_opt
 Z6 OL;O;10.0d;49
 Z7 dC:\modeltech64_10.0d\examples
 T_opt1
-Z8 VogB]ZA=0a@z=72O=5F]<Z1
+Z8 V@?i67_QJOVjD2a;]4dzJR1
 Z9 04 6 8 work ALU_tb behavior 1
-Z10 =5-408d5cce55c8-5c05e5aa-358-245c
+Z10 =5-408d5cce55c8-5c073767-3bd-1a94
 R4
 Z11 n@_opt1
 R6
 R7
 Ealu
-Z12 w1543889910
+Z12 w1543976109
 Z13 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 Z14 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z15 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
@@ -33,7 +33,7 @@ L5
 Z20 Vo7kTdjz<^8YmLmM4M7ZBn0
 Z21 OL;C;10.0d;49
 32
-Z22 !s108 1543890127.450000
+Z22 !s108 1543976723.864000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/ALU.vhd|
 Z24 !s107 D:/vhDL Procesador/ALU.vhd|
 Z25 o-work work -2002 -explicit
@@ -50,14 +50,14 @@ L15
 Z29 VW@g]FhLA]?bc3W8K?DU0z2
 R21
 32
-Z30 !s108 1543889913.873000
+Z30 !s108 1543976142.459000
 R23
 R24
 R25
 R26
 Z31 !s100 _QIgiiDY63;[aYGQMVk@71
 Ealu_tb
-Z32 w1543890108
+Z32 w1543976697
 Z33 DPx4 ieee 11 numeric_std 0 22 k7B<7GmYYYmX;0X]XHFD10
 R13
 R14
@@ -71,7 +71,7 @@ L6
 Z36 VYPg_SAmbMOL^@Bb`PDbGA3
 R21
 32
-Z37 !s108 1543890127.776000
+Z37 !s108 1543976724.159000
 Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/ALU_tb.vhd|
 Z39 !s107 D:/vhDL Procesador/ALU_tb.vhd|
 R25
@@ -86,7 +86,7 @@ R16
 Z41 DEx4 work 6 alu_tb 0 22 YPg_SAmbMOL^@Bb`PDbGA3
 l33
 L9
-Z42 V@cG;;_Ln36Rf]D4BcPCk[0
+Z42 VXN=@ATOZ0=C214d>]9]oM1
 R21
 32
 R37
@@ -94,7 +94,7 @@ R38
 R39
 R25
 R26
-Z43 !s100 ^[cbOTIXG^aDjFm3OnMk>2
+Z43 !s100 BC=4Woo5g:6`=lc8HB=JV3
 Eproc
 Z44 w1543608229
 R15
@@ -110,24 +110,25 @@ R21
 R25
 R26
 Z48 !s100 kHeH>KhaDHa9MITe81_3=3
-Z49 !s108 1543890126.372000
+Z49 !s108 1543976723.214000
 Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Proc.vhd|
 Z51 !s107 D:/vhDL Procesador/Proc.vhd|
 Eregs
-R44
+Z52 w1543971545
+R33
 R15
 R16
 R17
-Z52 8D:/vhDL Procesador/Regs.vhd
-Z53 FD:/vhDL Procesador/Regs.vhd
+Z53 8D:/vhDL Procesador/Regs.vhd
+Z54 FD:/vhDL Procesador/Regs.vhd
 l0
-L5
-Z54 V_fjWAGX<8620SASAi[Sn<3
+L6
+Z55 V6]>^@XN6nT3SQl3?`EFc40
 R21
 32
 R25
 R26
-Z55 !s100 E?9lTghWJ>6@Fe[W[NFPa1
-Z56 !s108 1543890127.248000
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Regs.vhd|
-Z58 !s107 D:/vhDL Procesador/Regs.vhd|
+Z56 !s100 fWfBWPinT1zAie3[4@0An3
+Z57 !s108 1543976723.707000
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Regs.vhd|
+Z59 !s107 D:/vhDL Procesador/Regs.vhd|
