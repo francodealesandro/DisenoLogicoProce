@@ -3,12 +3,12 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
-entity ALU_tb is
-end ALU_tb;
+entity alu_tb is
+end alu_tb;
 
-architecture behavior of ALU_tb is 
+architecture behavior of alu_tb is 
 
-	component ALU
+	component alu
 	port(
 		    A, B : in  STD_LOGIC_VECTOR (7 downto 0);
         S : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -55,7 +55,7 @@ begin
     else
       case op is
         when "000" =>
-          assert S = B report "Error al asignar S <= A" severity failure;
+          assert S = A report "Error al asignar S <= A" severity failure;
         when "001" =>
           assert S = (A(6 downto 0) & '0') report "Error al asignar S <= A sll 1" severity failure;
         when "010" =>

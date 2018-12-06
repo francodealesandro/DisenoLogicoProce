@@ -3,12 +3,12 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
-entity ALU_tb is
-end ALU_tb;
+entity alu_tb is
+end alu_tb;
 
-architecture behavior of ALU_tb is 
+architecture behavior of alu_tb is 
 
-	component ALU
+	component alu
 	port(
 		    A, B : in  STD_LOGIC_VECTOR (7 downto 0);
         S : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -33,7 +33,7 @@ architecture behavior of ALU_tb is
 begin
 
 	-- Instantiate the Unit Under Test (UUT)
-	uut: ALU port map(
+	uut: alu port map(
 		A => A,
 		B => B,
 		S => S,

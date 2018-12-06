@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 
-entity ALU is
+entity alu is
     port ( A : in  STD_LOGIC_VECTOR (7 downto 0);
            B : in  STD_LOGIC_VECTOR (7 downto 0);
            S : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -10,15 +10,15 @@ entity ALU is
            clk : in STD_LOGIC;
            rst : in STD_LOGIC
           );
-end ALU;
+end alu;
 
-architecture alu_arq of ALU is
+architecture alu_arq of alu is
   
   signal next_state : STD_LOGIC_VECTOR (7 downto 0);
   
 begin 
   
-  sync: process(clk)
+  sync: process(clk, rst)
 	begin
 	  if rst = '1' then
 	    S <= (others => '0');
