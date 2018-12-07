@@ -26,16 +26,16 @@ Z6 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z7 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z8 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z9 dD:\vhDL Procesador
-Z10 8D:/vhDL Procesador/ALU.vhd
-Z11 FD:/vhDL Procesador/ALU.vhd
+Z10 8D:\vhDL Procesador\ALU.vhd
+Z11 FD:\vhDL Procesador\ALU.vhd
 l0
 L5
 V^H@m:DLKA4YNz]`8=0:QQ1
 Z12 OL;C;10.0d;49
 32
-Z13 !s108 1544062545.528000
-Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/ALU.vhd|
-Z15 !s107 D:/vhDL Procesador/ALU.vhd|
+Z13 !s108 1544152248.490000
+Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:\vhDL Procesador\ALU.vhd|
+Z15 !s107 D:\vhDL Procesador\ALU.vhd|
 Z16 o-work work -2002 -explicit
 Z17 tExplicit 1
 !s100 F>i9:<94i]_?Vh[h^P0Th3
@@ -71,7 +71,7 @@ L6
 V7RSWVXX70f[KI6WM[^Lc92
 R12
 32
-Z22 !s108 1544062545.843000
+Z22 !s108 1544152248.731000
 Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/ALU_tb.vhd|
 Z24 !s107 D:/vhDL Procesador/ALU_tb.vhd|
 R16
@@ -95,26 +95,63 @@ R24
 R16
 R17
 !s100 6hQfZ2eH=L3M5ec`QgYXB0
-Eir
-Z25 w1544062572
+Edecode
+Z25 w1544153981
 R5
 R6
 R7
 R8
 R9
-Z26 8D:/vhDL Procesador/IR.vhd
-Z27 FD:/vhDL Procesador/IR.vhd
+Z26 8D:/vhDL Procesador/Decode.vhd
+Z27 FD:/vhDL Procesador/Decode.vhd
+l0
+L5
+VRG`MYQAOBh=k;;d4Jo:7N3
+!s100 Ye>6fUVQ>iXOP1MO:9?T?3
+R12
+32
+Z28 !s108 1544153985.979000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Decode.vhd|
+Z30 !s107 D:/vhDL Procesador/Decode.vhd|
+R16
+R17
+Adecode_arq
+R5
+R6
+R7
+R8
+Z31 DEx4 work 6 decode 0 22 RG`MYQAOBh=k;;d4Jo:7N3
+l22
+L16
+Z32 V`N4<A?XWGD9^nckLWDgI_1
+Z33 !s100 Q_O[JG>Z8PYkz8WIe6F1b3
+R12
+32
+R28
+R29
+R30
+R16
+R17
+Eir
+Z34 w1544062572
+R5
+R6
+R7
+R8
+R9
+Z35 8D:/vhDL Procesador/IR.vhd
+Z36 FD:/vhDL Procesador/IR.vhd
 l0
 L5
 VO18`Bf3k`7DkWj09kmU9d3
-!s100 ^@7n>kTmQMo2eYBfJSLnK1
 R12
 32
-Z28 !s108 1544062576.642000
-Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/IR.vhd|
-Z30 !s107 D:/vhDL Procesador/IR.vhd|
+Z37 !s108 1544152249.529000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/IR.vhd|
+Z39 !s107 D:/vhDL Procesador/IR.vhd|
 R16
 R17
+!s100 ^@7n>kTmQMo2eYBfJSLnK1
 Air_arq
 R5
 R6
@@ -124,31 +161,31 @@ DEx4 work 2 ir 0 22 O18`Bf3k`7DkWj09kmU9d3
 l18
 L14
 Veo1nRM7OY@Voe]`Bn6S`l3
-!s100 ?P<eR`d]M]amH^RB]OdIL2
 R12
 32
-R28
-R29
-R30
+R37
+R38
+R39
 R16
 R17
+!s100 ?P<eR`d]M]amH^RB]OdIL2
 Epc
-Z31 w1544061878
+Z40 w1544061878
 R5
 R6
 R7
 R8
 R9
-Z32 8D:/vhDL Procesador/PC.vhd
-Z33 FD:/vhDL Procesador/PC.vhd
+Z41 8D:/vhDL Procesador/PC.vhd
+Z42 FD:/vhDL Procesador/PC.vhd
 l0
 L5
 VgN^PmLBdKKPNVEk9`I=LN3
 R12
 32
-Z34 !s108 1544062546.657000
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/PC.vhd|
-Z36 !s107 D:/vhDL Procesador/PC.vhd|
+Z43 !s108 1544152249.273000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/PC.vhd|
+Z45 !s107 D:/vhDL Procesador/PC.vhd|
 R16
 R17
 !s100 9GAd4if0eNjZQ0U;9Qgk>3
@@ -163,9 +200,9 @@ L13
 V@<c:GTRc5^ARV73a:<Y<:1
 R12
 32
-R34
-R35
-R36
+R43
+R44
+R45
 R16
 R17
 !s100 AWOLnjkC9amga0D[6DQYm2
@@ -184,26 +221,63 @@ R12
 R16
 R17
 !s100 kHeH>KhaDHa9MITe81_3=3
-!s108 1544062544.653000
+!s108 1544152247.746000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Proc.vhd|
 !s107 D:/vhDL Procesador/Proc.vhd|
-Eregs
-Z37 w1543977292
+Ereg_a
+Z46 w1544149736
 R5
 R6
 R7
 R8
 R9
-Z38 8D:/vhDL Procesador/Regs.vhd
-Z39 FD:/vhDL Procesador/Regs.vhd
+Z47 8D:/vhDL Procesador/Reg.vhd
+Z48 FD:/vhDL Procesador/Reg.vhd
+l0
+L5
+V`^DK5jc<]J6A=DgP6Dof>2
+R12
+32
+Z49 !s108 1544152249.782000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Reg.vhd|
+Z51 !s107 D:/vhDL Procesador/Reg.vhd|
+R16
+R17
+!s100 0]]HVo?EHB_T<4oeWDJI]1
+Areg_a_arq
+R5
+R6
+R7
+R8
+DEx4 work 5 reg_a 0 22 `^DK5jc<]J6A=DgP6Dof>2
+l18
+L14
+VbDc>PVPO]@D?7b8ljEX740
+R12
+32
+R49
+R50
+R51
+R16
+R17
+!s100 U:?XUB2_RXm5kekkSSBL41
+Eregs
+Z52 w1543977292
+R5
+R6
+R7
+R8
+R9
+Z53 8D:/vhDL Procesador/Regs.vhd
+Z54 FD:/vhDL Procesador/Regs.vhd
 l0
 L6
 V[68mZ<mminFf?[>0gDN6c2
 R12
 32
-Z40 !s108 1544062545.175000
-Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Regs.vhd|
-Z42 !s107 D:/vhDL Procesador/Regs.vhd|
+Z55 !s108 1544152248.021000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/Regs.vhd|
+Z57 !s107 D:/vhDL Procesador/Regs.vhd|
 R16
 R17
 !s100 cGneUHPNzfl6]<K`0^VH51
@@ -218,29 +292,29 @@ L16
 VBdZ^IA<83ezG;j8G<Un;F3
 R12
 32
-R40
-R41
-R42
+R55
+R56
+R57
 R16
 R17
 !s100 2;oak[ABRh^0L0]o[g9:?1
 Erom_prog
-Z43 w1544061880
+Z58 w1544061880
 R5
 R6
 R7
 R8
 R9
-Z44 8D:/vhDL Procesador/ROM.vhd
-Z45 FD:/vhDL Procesador/ROM.vhd
+Z59 8D:/vhDL Procesador/ROM.vhd
+Z60 FD:/vhDL Procesador/ROM.vhd
 l0
 L5
 V8HJV`=z^D7;2?;n1g?f5N0
 R12
 32
-Z46 !s108 1544062546.134000
-Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/ROM.vhd|
-Z48 !s107 D:/vhDL Procesador/ROM.vhd|
+Z61 !s108 1544152249.004000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/vhDL Procesador/ROM.vhd|
+Z63 !s107 D:/vhDL Procesador/ROM.vhd|
 R16
 R17
 !s100 8]OZicMadjj[5[7[]TNBD0
@@ -255,9 +329,9 @@ L14
 VH37F21doFgh[[LV32AkJ@2
 R12
 32
-R46
-R47
-R48
+R61
+R62
+R63
 R16
 R17
 !s100 Gl6b_f[`]j9K`gmG]E6AD3
