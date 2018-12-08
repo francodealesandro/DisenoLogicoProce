@@ -34,5 +34,3 @@ begin
 	end process;
 
 end reg_a_arq;
-
-

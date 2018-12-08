@@ -1,10 +1,9 @@
-
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity regs is
-    Port ( clk : in  STD_LOGIC;
+    port ( clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
            we : in  STD_LOGIC;
            rd : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -36,7 +35,4 @@ begin
 
 dout <= reg(conv_integer(rs)); 
 
-
 end registers_table_arq;
-
-

@@ -1,9 +1,9 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity decode is
-    Port ( input : in STD_LOGIC_VECTOR (7 downto 0);
+    port ( input : in STD_LOGIC_VECTOR (7 downto 0);
            out_we : out  STD_LOGIC;
            reg_we : out  STD_LOGIC;
            reg_a_we : out  STD_LOGIC;
@@ -43,10 +43,10 @@ out_we_next <= '0' when rst = '1' else
 out_we <= out_we_next;
 
 reg_a_we_next <= '0' when rst = '1' else
-            reg_a_we_next when (rising_edge(clk)) else
-                  '0' when input = x"02" 
-                        or input = x"04" 
-                        or input = x"05" else '1';
+                 reg_a_we_next when (rising_edge(clk)) else
+                 '0' when input = x"02" 
+                     or input = x"04" 
+                     or input = x"05" else '1';
                   
 reg_a_we <= reg_a_we_next;
 
@@ -64,6 +64,3 @@ alu_op_next <= "000" when rst = '1' else
 alu_op <= alu_op_next;
 
 end decode_arq;
-
-
-
