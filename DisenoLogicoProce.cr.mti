@@ -8,23 +8,43 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Compiling entity decode
 -- Compiling architecture decode_arq of decode
 
-} {} {}} {D:/vhDL Procesador/Proc.vhd} {0 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Proc.vhd}
+} {} {}} {D:/vhDL Procesador/Proc.vhd} {0 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Proc.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity Proc
 -- Compiling architecture Beh_Proc of Proc
-** Error: D:/vhDL Procesador/Proc.vhd(71): near ",": syntax error
-** Error: D:/vhDL Procesador/Proc.vhd(73): Statement cannot be labeled.
-** Error: D:/vhDL Procesador/Proc.vhd(73): near ")": syntax error
-** Error: D:/vhDL Procesador/Proc.vhd(76): Statement cannot be labeled.
-** Error: D:/vhDL Procesador/Proc.vhd(76): near ")": syntax error
-** Error: D:/vhDL Procesador/Proc.vhd(79): Statement cannot be labeled.
-** Error: D:/vhDL Procesador/Proc.vhd(79): near ")": syntax error
-** Error: D:/vhDL Procesador/Proc.vhd(112): VHDL Compiler exiting
+** Error: D:\vhDL Procesador\Proc.vhd(93): (vcom-1136) Unknown identifier "pc_output".
+** Error: D:\vhDL Procesador\Proc.vhd(94): (vcom-1136) Unknown identifier "ir_input".
+** Error: D:\vhDL Procesador\Proc.vhd(99): (vcom-1136) Unknown identifier "ir_input".
+** Error: D:\vhDL Procesador\Proc.vhd(100): (vcom-1136) Unknown identifier "ir_output".
+** Error: D:\vhDL Procesador\Proc.vhd(108): (vcom-1136) Unknown identifier "decode_reg_we".
+** Error: D:\vhDL Procesador\Proc.vhd(109): (vcom-1136) Unknown identifier "ir_output".
+** Error: D:\vhDL Procesador\Proc.vhd(110): (vcom-1136) Unknown identifier "ir_output".
+** Error: D:\vhDL Procesador\Proc.vhd(109): (vcom-1436) Use of non globally static actual (slice name) of formal "regs_rd" requires VHDL 2008.
+** Error: D:\vhDL Procesador\Proc.vhd(110): (vcom-1436) Use of non globally static actual (slice name) of formal "regs_rs" requires VHDL 2008.
+** Error: D:\vhDL Procesador\Proc.vhd(116): near ",": syntax error
+** Error: D:\vhDL Procesador\Proc.vhd(122): Statement cannot be labeled.
+** Error: D:\vhDL Procesador\Proc.vhd(122): (vcom-1136) Unknown identifier "ir_output".
+** Error: D:\vhDL Procesador\Proc.vhd(123): (vcom-1136) Unknown identifier "regs_we".
+** Error: D:\vhDL Procesador\Proc.vhd(124): (vcom-1136) Unknown identifier "reg_out_we".
+** Error: D:\vhDL Procesador\Proc.vhd(125): (vcom-1136) Unknown identifier "reg_a_we".
+** Error: D:\vhDL Procesador\Proc.vhd(126): (vcom-1136) Unknown identifier "alu_op".
+** Error: D:\vhDL Procesador\Proc.vhd(127): (vcom-1023) Positional association (identifier "decode_bus_sel") found after named association.
+** Error: D:\vhDL Procesador\Proc.vhd(131): (vcom-1136) Unknown identifier "alu_b".
+** Error: D:\vhDL Procesador\Proc.vhd(132): (vcom-1023) Positional association (identifier "reg_a_we") found after named association.
+** Error: D:\vhDL Procesador\Proc.vhd(139): (vcom-1023) Positional association (identifier "reg_out_we") found after named association.
+** Error: D:\vhDL Procesador\Proc.vhd(137): (vcom-1136) Unknown identifier "reg_a_input".
+** Error: D:\vhDL Procesador\Proc.vhd(149): (vcom-1136) Unknown identifier "decode_bus_sel".
+** Error: D:\vhDL Procesador\Proc.vhd(149): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+** Error: D:\vhDL Procesador\Proc.vhd(150): (vcom-1136) Unknown identifier "ir_output".
+** Error: D:\vhDL Procesador\Proc.vhd(150): (vcom-1136) Unknown identifier "decode_bus_sel".
+** Error: D:\vhDL Procesador\Proc.vhd(150): Type error resolving infix expression "=" as type std.STANDARD.BOOLEAN.
+** Error: D:\vhDL Procesador\Proc.vhd(151): (vcom-1136) Unknown identifier "reg_dout".
+** Error: D:\vhDL Procesador\Proc.vhd(176): VHDL Compiler exiting
 
-} {8.0 16.0} {}} {D:/vhDL Procesador/Regs.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Regs.vhd}
+} {8.0 36.0} {}} {D:/vhDL Procesador/Regs.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Regs.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -84,7 +104,7 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Compiling entity pc
 -- Compiling architecture pc_arq of pc
 
-} {} {}} {D:/vhDL Procesador/ALU_tb.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\ALU_tb.vhd}
+} {} {}} {D:/vhDL Procesador/ALU_tb.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ALU_tb.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO

@@ -26,47 +26,47 @@ begin
 			out_we <= '0';
 			alu_op <= "000";
 		elsif rising_edge(clk) then
-			if (input = "00000010") then
+			if (input = "0000010") then
 				out_we <= '1';
 			else
 				out_we <= '0';
 			end if;
 		  
-			if (input = "00000100" or input = "00000101") then
+			if (input = "0000100" or input = "0000101") then
 				reg_a_we <= '1';
 			else
 				reg_a_we <= '0';
 			end if;
 			
-			if (input = "00000010" or input = "00000100" or input = "00000101") then
+			if (input = "0000010" or input = "0000100" or input = "0000101") then
 				reg_we <= '0';
 			else
 				reg_we <= '1';
 			end if;
 			
 			case input is
-				when "00010000" =>
+				when "0010000" =>
 					alu_op <= "010";
-				when "00010001" =>
+				when "0010001" =>
 					alu_op <= "011";
-				when "00010010" =>
+				when "0010010" =>
 					alu_op <= "100";
-				when "00010011" =>
+				when "0010011" =>
 					alu_op <= "101";
-				when "00010100" =>
+				when "0010100" =>
 					alu_op <= "110";
-				when "00100000" =>
+				when "0100000" =>
 					alu_op <= "001";
-				when "00100001" =>
+				when "0100001" =>
 					alu_op <= "111";
 				when others =>
 					alu_op <= "000";
 			end case;
 				
 			case input is
-				when "00000001" =>
+				when "0000001" =>
 					bus_sel <= "10";
-				when "00000101" =>
+				when "0000101" =>
 					bus_sel <= "01";
 				when others =>
 					bus_sel <= "00";
