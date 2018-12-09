@@ -18,7 +18,7 @@ architecture alu_arq of alu is
   
 begin 
   
-  sync: process(alu_clk, rst)
+  sync: process(alu_clk, alu_rst)
 	begin
 	  if alu_rst = '1' then
 	    alu_s <= (others => '0');
@@ -27,30 +27,12 @@ begin
 		end if;
 	end process;
 
-  process (alu_op, alu_a, alu_b)
-  begin
-    case alu_op is
-      when "000" =>
-        next_state <= alu_a;
-      when "001" =>
-        --next_state <= A sll 1;
-        next_state <= alu_a(6 downto 0) & '0';
-      when "010" =>
-        next_state <= alu_a + alu_b;
-      when "011" =>
-        next_state <= alu_a - alu_b;
-      when "100" =>
-        next_state <= alu_a and alu_b;
-      when "101" =>
-        next_state <= alu_a or alu_b;
-      when "110" =>
-        next_state <= alu_a xor alu_b;
-      when "111" =>
-        --next_state <= A srl 1;
-        next_state <= '0' & alu_a(7 downto 1);
-      when others =>
-        next_state <= alu_a;
-    end case;
-  end process; 
-
+next_state <= alu_a(6 downto 0) & '0' when alu_op = "001" else
+              alu_a + alu_b when alu_op = "010" else
+              alu_a - alu_b when alu_op = "011" else
+              alu_a and alu_b when alu_op = "100" else
+              alu_a or alu_b when alu_op = "101" else
+              alu_a xor alu_b when alu_op = "110" else
+              '0' & alu_a(7 downto 1) when alu_op = "111" else
+              alu_a
 end alu_arq;
