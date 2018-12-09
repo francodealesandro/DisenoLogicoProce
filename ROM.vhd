@@ -13,7 +13,8 @@ end rom_prog;
  
 architecture rom_arq of rom_prog is
   
-    type memoria_rom is array (0 to 14) of STD_LOGIC_VECTOR (15 downto 0);
+    constant rom_tam : INTEGER := 15;
+    type memoria_rom is array (0 to rom_tam-1) of STD_LOGIC_VECTOR (15 downto 0);
     signal ROM : memoria_rom := (
       "0000000100110000", --in r3
 	    "0000010000000011", --lda r3

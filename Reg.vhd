@@ -20,17 +20,12 @@ begin
   sync: process(reg_a_clk, reg_a_rst)
 	begin
 	  if reg_a_rst = '1' then
-	    reg_a_output <= (others => '0');
-		elsif (rising_edge(reg_a_clk)) then
-			reg_a_output <= reg;
+	    reg <= (others => '0');
+		elsif (rising_edge(reg_a_clk)) and reg_a_we = '1' then
+	     reg <= reg_a_input;
 		end if;
 	end process;
 	
-	process(reg_a_input, reg_a_we)
-	begin
-	  if reg_a_we = '1' then
-	    reg <= reg_a_input;
-		end if;
-	end process;
+	reg_a_output <= reg;
 
 end reg_a_arq;

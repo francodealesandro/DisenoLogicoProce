@@ -20,17 +20,12 @@ begin
   sync: process(ir_clk, ir_rst)
 	begin
 	  if ir_rst = '1' then
-	    ir_output <= (others => '0');
-		elsif (rising_edge(ir_clk)) then
-			ir_output <= instruction;
+	    instruction <= (others => '0');
+		elsif (rising_edge(ir_clk)) and ir_we = '1' then
+	     instruction <= ir_input;
 		end if;
 	end process;
 	
-	process(ir_input, ir_we)
-	begin
-	  if ir_we = '1' then
-	    instruction <= ir_input;
-		end if;
-	end process;
+	ir_output <= instruction;
 
 end ir_arq;
