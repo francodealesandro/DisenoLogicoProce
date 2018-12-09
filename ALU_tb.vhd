@@ -10,23 +10,23 @@ architecture alu_behavior of alu_tb is
 
 	component alu
 	port(
-		    A, B : in  STD_LOGIC_VECTOR (7 downto 0);
-        S : out  STD_LOGIC_VECTOR (7 downto 0);
-        op : in  STD_LOGIC_VECTOR (2 downto 0);
-        clk : in STD_LOGIC;
-		    rst : in STD_LOGIC
+		    alu_a, alu_b : in  STD_LOGIC_VECTOR (7 downto 0);
+        alu_s : out  STD_LOGIC_VECTOR (7 downto 0);
+        alu_op : in  STD_LOGIC_VECTOR (2 downto 0);
+        alu_clk : in STD_LOGIC;
+		    alu_rst : in STD_LOGIC
 		);
 	end component;
 
-	-- Señales de estímulo
-	signal A :  STD_LOGIC_VECTOR (7 downto 0) := "10110100";
-	signal B :  STD_LOGIC_VECTOR (7 downto 0) := "10001010";
-  signal op : STD_LOGIC_VECTOR (2 downto 0) := "110";
-  signal clk :  STD_LOGIC := '0';
-	signal rst :  STD_LOGIC := '0';
+	-- alu_señales de estímulo
+	signal alu_a :  STD_LOGIC_VECTOR (7 downto 0) := "10110100";
+	signal alu_b :  STD_LOGIC_VECTOR (7 downto 0) := "10001010";
+  signal alu_op : STD_LOGIC_VECTOR (2 downto 0) := "110";
+  signal alu_clk :  STD_LOGIC := '0';
+	signal alu_rst :  STD_LOGIC := '0';
 	
-	-- Señales a observar
-	signal S:  std_logic_vector(7 downto 0);
+	-- alu_señales a observar
+	signal alu_s:  std_logic_vector(7 downto 0);
 
   constant delay: time:= 10 ns;
 
@@ -34,65 +34,65 @@ begin
 
 	-- Instantiate the Unit Under Test (UUT)
 	uut: alu port map(
-		A => A,
-		B => B,
-		S => S,
-		op => op,
-		clk => clk,
-		rst => rst
+		alu_a => alu_a,
+		alu_b => alu_b,
+		alu_s => alu_s,
+		alu_op => alu_op,
+		alu_clk => alu_clk,
+		alu_rst => alu_rst
 	);
 
    Pop: process 
    begin
-      op <= op + 1; 
+      alu_op <= alu_op + 1; 
       wait for delay;
    end process;
    
-  Passert: process(S)
+  Passert: process(alu_s)
   begin
-    if rst = '1' then
-      assert S = "00000000" report "Error al inducir rst" severity failure;
+    if alu_rst = '1' then
+      assert alu_s = "00000000" report "Error al inducir alu_rst" severity failure;
     else
-      case op is
+      case alu_op is
         when "000" =>
-          assert S = A report "Error al asignar S <= A" severity failure;
+          assert alu_s = alu_a report "Error al asignar alu_s <= alu_a" severity failure;
         when "001" =>
-          assert S = (A(6 downto 0) & '0') report "Error al asignar S <= A sll 1" severity failure;
+          assert alu_s = (alu_a(6 downto 0) & '0') report "Error al asignar alu_s <= alu_a sll 1" severity failure;
         when "010" =>
-          assert S = (A + B) report "Error al asignar S <= A + B" severity failure;
+          assert alu_s = (alu_a + alu_b) report "Error al asignar alu_s <= alu_a + alu_b" severity failure;
         when "011" =>
-          assert S = (A - B) report "Error al asignar S <= A - B" severity failure;
+          assert alu_s = (alu_a - alu_b) report "Error al asignar alu_s <= alu_a - alu_b" severity failure;
         when "100" =>
-          assert S = (A and B) report "Error al asignar S <= A and B" severity failure;
+          assert alu_s = (alu_a and alu_b) report "Error al asignar alu_s <= alu_a and alu_b" severity failure;
         when "101" =>
-          assert S = (A or B) report "Error al asignar S <= A or B" severity failure;
+          assert alu_s = (alu_a or alu_b) report "Error al asignar alu_s <= alu_a or alu_b" severity failure;
         when "110" =>
-          assert S = (A xor B) report "Error al asignar S <= A xor B" severity failure;
+          assert alu_s = (alu_a xor alu_b) report "Error al asignar alu_s <= alu_a xor alu_b" severity failure;
         when "111" =>
-          assert S = ('0' & A(7 downto 1)) report "Error al asignar S <= A srl 1" severity failure;
+          assert alu_s = ('0' & alu_a(7 downto 1)) report "Error al asignar alu_s <= alu_a srl 1" severity failure;
         when others =>
-          assert S = A report "Error al asignar S <= A" severity failure;
+          assert alu_s = alu_a report "Error al asignar alu_s <= alu_a" severity failure;
         end case;
     end if;
    end process;
    
    Pclk: process 
    begin
-      clk <= '0';
+      alu_clk <= '0';
       wait for delay/2;
-      clk <= '1';
+      alu_clk <= '1';
       wait for delay/2;
    end process;       
    
    PRst: process 
    begin
-      rst <= '1'; 
+      alu_rst <= '1'; 
       wait for delay;
-      rst <= '0';     
+      alu_rst <= '0';     
       wait for delay*16;
-      rst <= '1'; 
+      alu_rst <= '1'; 
       wait for delay;
-      rst <= '0';     
+      alu_rst <= '0';     
       wait;
    end process; 
 

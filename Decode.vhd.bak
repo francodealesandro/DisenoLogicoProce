@@ -17,7 +17,7 @@ architecture decode_arq of decode is
   
 begin
   
-  process (decode_clk,rst)
+  process (decode_clk,decode_rst)
     begin
 		if decode_rst= '1' then
 			decode_bus_sel <= "00";

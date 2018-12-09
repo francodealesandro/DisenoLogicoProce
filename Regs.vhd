@@ -20,7 +20,7 @@ architecture registers_table_arq of regs is
   
 begin 
 
-  process (regs_clk, regs_rst)
+  sync: process (regs_clk, regs_rst)
   begin
     if regs_rst= '1' then
       for i in 0 to reg_tam-1 loop

@@ -6,8 +6,8 @@ entity rom_prog is
     port (
         rom_prog_addr : in  STD_LOGIC_VECTOR(6 downto 0);
         rom_prog_output : out STD_LOGIC_VECTOR(15 downto 0);
-        clk  : in  STD_LOGIC;
-        rst : in  STD_LOGIC  
+        rom_prog_clk  : in  STD_LOGIC;
+        rom_prog_rst : in  STD_LOGIC  
     );
 end rom_prog;
  
@@ -34,11 +34,11 @@ architecture rom_arq of rom_prog is
     
 begin
   
-    process (clk, rst) 
+    process (rom_prog_clk, rom_prog_rst) 
     begin
-      if rst = '1' then
+      if rom_prog_rst = '1' then
 	      rom_prog_output <= (others => '0');
-      elsif rising_edge(clk) then
+      elsif rising_edge(rom_prog_clk) then
         rom_prog_output <= ROM(conv_integer(rom_prog_addr));
       end if;
     end process;

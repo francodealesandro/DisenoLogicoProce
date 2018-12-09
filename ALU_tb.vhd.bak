@@ -6,7 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity alu_tb is
 end alu_tb;
 
-architecture behavior of alu_tb is 
+architecture alu_behavior of alu_tb is 
 
 	component alu
 	port(

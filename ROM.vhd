@@ -34,7 +34,7 @@ architecture rom_arq of rom_prog is
     
 begin
   
-    process (rom_prog_clk, rom_prog_rst) 
+    sync: process (rom_prog_clk, rom_prog_rst) 
     begin
       if rom_prog_rst = '1' then
 	      rom_prog_output <= (others => '0');

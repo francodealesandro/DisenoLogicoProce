@@ -15,14 +15,14 @@ architecture pc_arq of pc is
     
 begin
   
-    process (clk, rst) 
+    process (pc_clk, pc_rst) 
     begin
-      if rst = '1' then
+      if pc_rst = '1' then
 	      count <= (others => '0');
-	      output <= (others => '0');
-      elsif rising_edge(clk) then
+	      pc_output <= (others => '0');
+      elsif rising_edge(pc_clk) then
         count <= count+1;
-        output <= count;
+        pc_output <= count;
       end if;
     end process;
     

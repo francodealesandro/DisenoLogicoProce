@@ -57,8 +57,8 @@ end component;
 
 
 component decode port (decode_input : in  std_logic_vector (7 downto 0);
-          decode_clk, decode_rst : in  std_logic
-					decode_reg_we, decode_out_we, decode_reg_a_we : out  std_logic;
+          decode_clk, decode_rst : in  std_logic;
+					decode_reg_we, decode_out_we, decode_reg_a_we : out std_logic;
 					decode_alu_op : out  std_logic_vector (2 downto 0);
 					decode_bus_sel : out  std_logic_vector (1 downto 0));
 end component; 

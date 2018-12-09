@@ -15,7 +15,7 @@ architecture pc_arq of pc is
     
 begin
   
-    process (pc_clk, pc_rst) 
+    sync: process (pc_clk, pc_rst) 
     begin
       if pc_rst = '1' then
 	      count <= (others => '0');
