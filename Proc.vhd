@@ -11,7 +11,7 @@ entity Proc is
     port ( clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
            input : in  STD_LOGIC_VECTOR (7 downto 0);
-           output : out  STD_LOGIC_VECTOR (7 downto 0));
+           output : out  STD_LOGIC_VECTOR (7 downto 0) := (others => '0'));
 end Proc;
 
 architecture Beh_Proc of Proc is

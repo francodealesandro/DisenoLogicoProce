@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity pc is
     port (
-        pc_output : out STD_LOGIC_VECTOR(6 downto 0);
+        pc_output : out STD_LOGIC_VECTOR(6 downto 0) := (others => '0');
         pc_clk, pc_rst  : in  STD_LOGIC
     );
 end pc;

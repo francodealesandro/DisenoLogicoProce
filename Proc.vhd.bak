@@ -182,7 +182,7 @@ sig_mux_out <= input when sig_decode_bus_sel = "10" else
 -- <pc> de 8 bits
 -- <ir> de 16 bits
 
-	process (clk, rst)
+	sync: process (clk, rst)
 	
 	begin
 	    if (rst='1') then 

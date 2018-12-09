@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity ir is
     port ( ir_input : in  STD_LOGIC_VECTOR (15 downto 0);
-           ir_output : out  STD_LOGIC_VECTOR (15 downto 0);
+           ir_output : out  STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
            ir_we : in  STD_LOGIC;
            ir_clk : in STD_LOGIC;
            ir_rst : in STD_LOGIC

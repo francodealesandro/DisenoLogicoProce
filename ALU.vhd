@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 entity alu is
     port ( alu_a : in  STD_LOGIC_VECTOR (7 downto 0);
            alu_b : in  STD_LOGIC_VECTOR (7 downto 0);
-           alu_s : out  STD_LOGIC_VECTOR (7 downto 0);
+           alu_s : out  STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
            alu_op : in  STD_LOGIC_VECTOR (2 downto 0);
            alu_clk : in STD_LOGIC;
            alu_rst : in STD_LOGIC
@@ -14,7 +14,7 @@ end alu;
 
 architecture alu_arq of alu is
   
-  signal next_state : STD_LOGIC_VECTOR (7 downto 0);
+  signal next_state : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
   
 begin 
   

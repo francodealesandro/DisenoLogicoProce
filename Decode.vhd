@@ -4,11 +4,11 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity decode is
     port ( decode_input : in STD_LOGIC_VECTOR (7 downto 0);
-           decode_out_we : out  STD_LOGIC;
-           decode_reg_we : out  STD_LOGIC;
-           decode_reg_a_we : out  STD_LOGIC;
-           decode_alu_op : out  STD_LOGIC_VECTOR (2 downto 0);
-           decode_bus_sel : out  STD_LOGIC_VECTOR (1 downto 0);
+           decode_out_we : out  STD_LOGIC := '0';
+           decode_reg_we : out  STD_LOGIC := '0';
+           decode_reg_a_we : out  STD_LOGIC := '0';
+           decode_alu_op : out  STD_LOGIC_VECTOR (2 downto 0) := (others => '0');
+           decode_bus_sel : out  STD_LOGIC_VECTOR (1 downto 0) := (others => '0');
            decode_clk : in  STD_LOGIC;
            decode_rst : in  STD_LOGIC);
 end decode;

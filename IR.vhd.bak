@@ -29,7 +29,7 @@ begin
 	process(ir_input, ir_we)
 	begin
 	  if ir_we = '1' then
-	    instruction <= input;
+	    instruction <= ir_input;
 		end if;
 	end process;
 

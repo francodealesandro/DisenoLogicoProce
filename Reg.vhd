@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity reg_a is
     port ( reg_a_input : in  STD_LOGIC_VECTOR (7 downto 0);
-           reg_a_output : out  STD_LOGIC_VECTOR (7 downto 0);
+           reg_a_output : out  STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
            reg_a_we : in  STD_LOGIC;
            reg_a_clk : in STD_LOGIC;
            reg_a_rst : in STD_LOGIC

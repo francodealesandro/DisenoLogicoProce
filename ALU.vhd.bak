@@ -14,7 +14,7 @@ end alu;
 
 architecture alu_arq of alu is
   
-  signal next_state : STD_LOGIC_VECTOR (7 downto 0);
+  signal next_state : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
   
 begin 
   
@@ -34,5 +34,5 @@ next_state <= alu_a(6 downto 0) & '0' when alu_op = "001" else
               alu_a or alu_b when alu_op = "101" else
               alu_a xor alu_b when alu_op = "110" else
               '0' & alu_a(7 downto 1) when alu_op = "111" else
-              alu_a
+              alu_a;
 end alu_arq;

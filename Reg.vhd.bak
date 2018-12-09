@@ -17,9 +17,9 @@ architecture reg_a_arq of reg_a is
   
 begin 
   
-  sync: process(reg_a_clk, regs_rst)
+  sync: process(reg_a_clk, reg_a_rst)
 	begin
-	  if regs_rst = '1' then
+	  if reg_a_rst = '1' then
 	    reg_a_output <= (others => '0');
 		elsif (rising_edge(reg_a_clk)) then
 			reg_a_output <= reg;

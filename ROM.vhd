@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 entity rom_prog is
     port (
         rom_prog_addr : in  STD_LOGIC_VECTOR(6 downto 0);
-        rom_prog_output : out STD_LOGIC_VECTOR(15 downto 0);
+        rom_prog_output : out STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
         rom_prog_clk  : in  STD_LOGIC;
         rom_prog_rst : in  STD_LOGIC  
     );

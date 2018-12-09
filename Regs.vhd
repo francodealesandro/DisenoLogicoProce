@@ -9,7 +9,7 @@ entity regs is
            regs_rd : in  STD_LOGIC_VECTOR (3 downto 0);
            regs_rs : in  STD_LOGIC_VECTOR (3 downto 0);
            regs_din : in  STD_LOGIC_VECTOR (7 downto 0);
-           regs_dout : out  STD_LOGIC_VECTOR (7 downto 0));
+           regs_dout : out  STD_LOGIC_VECTOR (7 downto 0) := (others => '0'));
 end regs;
 
 architecture registers_table_arq of regs is
