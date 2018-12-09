@@ -45,19 +45,19 @@ begin
 			end if;
 			
 			case decode_input is
-				when "00010000" =>
+				when "00001010" =>
 					decode_alu_op <= "010";
-				when "00010001" =>
+				when "00001011" =>
 					decode_alu_op <= "011";
-				when "00010010" =>
+				when "00001100" =>
 					decode_alu_op <= "100";
-				when "00010011" =>
+				when "00001101" =>
 					decode_alu_op <= "101";
-				when "00010100" =>
+				when "00001110" =>
 					decode_alu_op <= "110";
-				when "00100000" =>
+				when "00010100" =>
 					decode_alu_op <= "001";
-				when "00100001" =>
+				when "00010101" =>
 					decode_alu_op <= "111";
 				when others =>
 					decode_alu_op <= "000";

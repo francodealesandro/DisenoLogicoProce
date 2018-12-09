@@ -19,7 +19,7 @@ architecture proc_behavior of proc_tb is
 
 	-- Señales de estímulo
 	signal clk, rst : STD_LOGIC := '0';
-  signal input : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
+  signal input : STD_LOGIC_VECTOR (7 downto 0) := (others => '1');
   
 	-- Señales a observar
 	signal output : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
@@ -36,13 +36,11 @@ begin
 		rst => rst
 	);
 
-  Passert: process(output)
+  Passert: process
   begin
-    if rst = '1' then
-      assert output = "00000000" report "Error al inducir rst" severity failure;
-    else
-      
-    end if;
+    wait for delay;
+    assert output = "00000000" report "Error al inducir rst" severity failure;
+    wait;
    end process;
    
    Pclk: process 
@@ -55,8 +53,6 @@ begin
    
    PRst: process 
    begin
-      rst <= '0';     
-      wait for delay;
       rst <= '1'; 
       wait for delay;
       rst <= '0';     

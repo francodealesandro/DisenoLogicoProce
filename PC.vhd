@@ -11,7 +11,7 @@ end pc;
  
 architecture pc_arq of pc is
     
-    signal count : STD_LOGIC_VECTOR(6 downto 0);
+    signal count : STD_LOGIC_VECTOR(6 downto 0) := (others => '0');
     
 begin
   
@@ -20,7 +20,7 @@ begin
       if pc_rst = '1' then
 	      count <= (others => '0');
 	      pc_output <= (others => '0');
-      elsif rising_edge(pc_clk) then
+      elsif rising_edge(pc_clk) and count < "1110" then
         count <= count+1;
         pc_output <= count;
       end if;

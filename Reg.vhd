@@ -13,7 +13,7 @@ end reg_a;
 
 architecture reg_a_arq of reg_a is
   
-  signal reg : STD_LOGIC_VECTOR (7 downto 0);
+  signal reg : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
   
 begin 
   

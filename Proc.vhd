@@ -10,7 +10,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Proc is
     port ( clk : in  STD_LOGIC;
            rst : in  STD_LOGIC;
-           input : in  STD_LOGIC_VECTOR (7 downto 0);
+           input : in  STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
            output : out  STD_LOGIC_VECTOR (7 downto 0) := (others => '0'));
 end Proc;
 
@@ -71,31 +71,31 @@ end component;
 -- ======================
 -- Declaración de señales :
 -- *colocadas (la mayoría) en orden de salida de los componentes
-signal sig_proc_output: STD_LOGIC_VECTOR(7 downto 0);
+signal sig_proc_output: STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 
 -- PC
-signal sig_pc_output: STD_LOGIC_VECTOR(6 downto 0);
+signal sig_pc_output: STD_LOGIC_VECTOR(6 downto 0) := (others => '0');
 
 -- ROM de programa
-signal sig_rom_prog_output: std_logic_vector (15 downto 0);
+signal sig_rom_prog_output: std_logic_vector (15 downto 0) := (others => '0');
 
 -- IR
-signal sig_ir_output: std_logic_vector (15 downto 0);
+signal sig_ir_output: std_logic_vector (15 downto 0) := (others => '0');
 signal sig_ir_we: std_logic;
 
 -- Decode
 signal sig_decode_out_we, sig_decode_reg_we, sig_decode_reg_a_we: std_logic;
-signal sig_decode_alu_op: std_logic_vector (2 downto 0);
-signal sig_decode_bus_sel: std_logic_vector (1 downto 0);
+signal sig_decode_alu_op: std_logic_vector (2 downto 0) := (others => '0');
+signal sig_decode_bus_sel: std_logic_vector (1 downto 0) := (others => '0');
 
 -- Registro A
-signal sig_reg_a_output: STD_LOGIC_VECTOR (7 downto 0);
+signal sig_reg_a_output: STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 
 -- Registro out
-signal sig_reg_out_input, sig_reg_out_output: STD_LOGIC_VECTOR (7 downto 0);
+signal sig_reg_out_input, sig_reg_out_output: STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 
 -- Mux
-signal sig_mux_out: STD_LOGIC_VECTOR (7 downto 0);
+signal sig_mux_out: STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 
 
 -- ======================
@@ -120,7 +120,7 @@ rom_prog_rst => rst);
 -- IR
 eIR: ir port map (ir_input => sig_rom_prog_output,
 ir_output => sig_ir_output,
-ir_we => sig_ir_we,
+ir_we => '1',
 ir_clk => clk,
 ir_rst => rst);
 

@@ -16,7 +16,7 @@ architecture registers_table_arq of regs is
 
   constant reg_tam : INTEGER := 16;
   type mem is array(reg_tam-1 downto 0) of STD_LOGIC_VECTOR(7 downto 0);
-  signal reg: mem;
+  signal reg: mem := (others => (others => '0'));
   
 begin 
 
