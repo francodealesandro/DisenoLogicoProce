@@ -15,7 +15,7 @@ architecture rom_arq of rom_prog is
   
     type memoria_rom is array (0 to 14) of STD_LOGIC_VECTOR (15 downto 0);
     signal ROM : memoria_rom := (
-      "0000000101000000", --in r3
+      "0000000100110000", --in r3
 	    "0000010000000011", --lda r3
 	    "0000101001000011", --add r4 r3
 	    "0000101101000101", --sub r4 r5

@@ -97,7 +97,8 @@ signal sig_reg_out_input, sig_reg_out_output: STD_LOGIC_VECTOR (7 downto 0) := (
 -- Mux
 signal sig_mux_out: STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 
-
+-- Regs
+signal sig_regs_dout: STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
 -- ======================
 
 
@@ -128,10 +129,10 @@ ir_rst => rst);
 eregs:  regs Port map (regs_clk => clk, 
 regs_rst => rst, 
 regs_we => sig_decode_reg_we, 
-								regs_rd => sig_ir_output(3 downto 0), 
-								regs_rs => sig_ir_output(7 downto 4), 
+								regs_rd => sig_ir_output(7 downto 4), 
+								regs_rs => sig_ir_output(3 downto 0), 
 								regs_din => sig_reg_out_input, 
-								regs_dout => sig_mux_out); 
+								regs_dout => sig_regs_dout); 
 -- ALU
 eAlu: alu port map (alu_op => sig_decode_alu_op, 
 					          alu_a => sig_mux_out,
@@ -169,7 +170,7 @@ reg_out_rst => rst);
 
 sig_mux_out <= input when sig_decode_bus_sel = "10" else
            sig_ir_output(7 downto 0) when sig_decode_bus_sel = "01" else
-           sig_mux_out;
+           sig_regs_dout;
            
            
 -- ================
