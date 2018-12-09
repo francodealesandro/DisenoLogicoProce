@@ -57,7 +57,8 @@ end component;
 
 
 component decode port (decode_input : in  std_logic_vector (7 downto 0);
-					decode_reg_we, decode_out_we, decode_reg_a_we : out  std_logic;
+          decode_clk, decode_rst : in  std_logic;
+					decode_reg_we, decode_out_we, decode_reg_a_we : out std_logic;
 					decode_alu_op : out  std_logic_vector (2 downto 0);
 					decode_bus_sel : out  std_logic_vector (1 downto 0));
 end component; 
@@ -68,10 +69,9 @@ end component;
   
   
 -- ======================
-
-
 -- Declaración de señales :
 -- *colocadas (la mayoría) en orden de salida de los componentes
+signal sig_proc_output: STD_LOGIC_VECTOR(7 downto 0);
 
 -- PC
 signal sig_pc_output: STD_LOGIC_VECTOR(6 downto 0);
@@ -146,7 +146,9 @@ decode_reg_we => sig_decode_reg_we,
 decode_out_we => sig_decode_out_we,
 decode_reg_a_we => sig_decode_reg_a_we,
 decode_alu_op => sig_decode_alu_op,
-decode_bus_sel => sig_decode_bus_sel);
+decode_bus_sel => sig_decode_bus_sel,
+decode_clk => clk,
+decode_rst => rst);
 
 -- Registro A
 eReg_A: reg_a port map (reg_a_input => sig_mux_out,
@@ -157,7 +159,7 @@ reg_a_rst => rst);
 
 -- Registro Out
 eReg_Out: reg_out port map (reg_out_input => sig_reg_out_input,
-reg_out_output => output,
+reg_out_output => sig_proc_output,
 reg_out_we => sig_decode_out_we,
 reg_out_clk => clk,
 reg_out_rst => rst);
@@ -183,12 +185,11 @@ sig_mux_out <= input when sig_decode_bus_sel = "10" else
 	process (clk, rst)
 	
 	begin
-	     if (rst='1') then 
-		  
+	    if (rst='1') then 
+		    output <= (others => '0');
 		  elsif (rising_edge(clk)) then
-		  
+		    output <= sig_proc_output;
 		  end if;
-		  
 	end process;
 
 end Beh_Proc;

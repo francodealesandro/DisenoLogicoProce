@@ -3,13 +3,13 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity regs is
-    port ( clk : in  STD_LOGIC;
-           rst : in  STD_LOGIC;
-           we : in  STD_LOGIC;
-           rd : in  STD_LOGIC_VECTOR (3 downto 0);
-           rs : in  STD_LOGIC_VECTOR (3 downto 0);
-           din : in  STD_LOGIC_VECTOR (7 downto 0);
-           dout : out  STD_LOGIC_VECTOR (7 downto 0));
+    port ( regs_clk : in  STD_LOGIC;
+           regs_rst : in  STD_LOGIC;
+           regs_we : in  STD_LOGIC;
+           regs_rd : in  STD_LOGIC_VECTOR (3 downto 0);
+           regs_rs : in  STD_LOGIC_VECTOR (3 downto 0);
+           regs_din : in  STD_LOGIC_VECTOR (7 downto 0);
+           regs_dout : out  STD_LOGIC_VECTOR (7 downto 0));
 end regs;
 
 architecture registers_table_arq of regs is
@@ -20,19 +20,19 @@ architecture registers_table_arq of regs is
   
 begin 
 
-  process (clk,rst)
+  process (regs_clk, regs_rst)
   begin
-    if rst= '1' then
+    if regs_rst= '1' then
       for i in 0 to reg_tam-1 loop
         reg(i) <= (others => '0');
       end loop; 
-    elsif (clk'event and clk = '1') then
-      if (we = '1') then
-        reg(conv_integer(rd)) <= din;
+    elsif (rising_edge(regs_clk)) then
+      if (regs_we = '1') then
+        reg(conv_integer(regs_rd)) <= regs_din;
       end if;
     end if; 
   end process; 
 
-dout <= reg(conv_integer(rs)); 
+regs_dout <= reg(conv_integer(regs_rs)); 
 
 end registers_table_arq;

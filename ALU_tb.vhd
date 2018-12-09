@@ -1,12 +1,12 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
-use ieee.numeric_std.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity alu_tb is
 end alu_tb;
 
-architecture behavior of alu_tb is 
+architecture alu_behavior of alu_tb is 
 
 	component alu
 	port(
