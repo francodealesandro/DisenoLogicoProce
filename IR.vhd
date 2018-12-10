@@ -3,29 +3,28 @@ use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_UNSIGNED.all;
 
 entity ir is
-    port ( ir_input : in  STD_LOGIC_VECTOR (15 downto 0);
-           ir_output : out  STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
-           ir_we : in  STD_LOGIC;
-           ir_clk : in STD_LOGIC;
-           ir_rst : in STD_LOGIC
-          );
+    port ( input : in STD_LOGIC_VECTOR (15 downto 0);
+           output : out STD_LOGIC_VECTOR (15 downto 0);
+           we : in STD_LOGIC;
+           clk : in STD_LOGIC;
+           rst : in STD_LOGIC);
 end ir;
 
 architecture ir_arq of ir is
   
-  signal instruction : STD_LOGIC_VECTOR (15 downto 0);
+  signal instruction : STD_LOGIC_VECTOR (15 downto 0) := (others => '0');
   
 begin 
   
-  sync: process(ir_clk, ir_rst)
+  sync: process(clk, rst)
 	begin
-	  if ir_rst = '1' then
+	  if rst = '1' then
 	    instruction <= (others => '0');
-		elsif (rising_edge(ir_clk)) and ir_we = '1' then
-	     instruction <= ir_input;
+		elsif (rising_edge(clk)) and we = '1' then
+	     instruction <= input;
 		end if;
 	end process;
 	
-	ir_output <= instruction;
+	output <= instruction;
 
 end ir_arq;
