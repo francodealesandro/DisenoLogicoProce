@@ -64,15 +64,16 @@ component pc port (output : out STD_LOGIC_VECTOR(6 downto 0);
         clk, rst : in  STD_LOGIC);
 end component; 
   
-  
 -- ======================
 -- Declaración de señales :
+
 signal PC_ROM: STD_LOGIC_VECTOR(6 downto 0) := (others => '0');
 signal ROM_IR, IR_OUTPUT: std_logic_vector (15 downto 0) := (others => '0');
 signal DECO_WE_REGO, DECO_WE_REGS, DECO_WE_REGA: std_logic;
 signal DECO_OP_ALU: std_logic_vector (2 downto 0) := (others => '0');
 signal DECO_BUS_SEL_MUX: std_logic_vector (1 downto 0) := (others => '0');
 signal REGA_ALU, REGO_INPUT, MUX_OUTPUT, REGS_MUX: STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
+
 -- ======================
 
 begin
@@ -143,12 +144,10 @@ rst => rst);
 -- *controlado por bus_sel
 
 MUX_OUTPUT <= input when DECO_BUS_SEL_MUX = "10" else
-           IR_OUTPUT(7 downto 0) when DECO_BUS_SEL_MUX = "01" else
-           REGS_MUX;
-           
+              IR_OUTPUT(7 downto 0) when DECO_BUS_SEL_MUX = "01" else
+              REGS_MUX;
            
 -- ================
-
 
 -- Descripción de los almacenamientos
 -- Los almacenamientos que se deben decribir aca son: 

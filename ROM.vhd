@@ -26,11 +26,11 @@ architecture rom_arq of rom_prog is
 	    "0000001000001000", --out r7
 	    "0000001000001001", --out r8
 	    "0000001000001101", --out r13
-	    "0000001000001110" --out r14
+	    "0000001000001110"  --out r14
     );
     
 begin
   
-    output <= ROM(conv_integer(addr)) when addr <= 1111 else (others => '0');
+    output <= ROM(conv_integer(addr)) when addr <= (rom_tam-1) else (others => '0');
     
 end rom_arq;
