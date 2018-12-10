@@ -38,7 +38,7 @@ begin
 
   Passert: process
   begin
-    wait for 1200 ns;
+    wait for 600 ns;
     --assert output = "00000000" report "Error al inducir rst" severity failure;
     wait;
   end process;
