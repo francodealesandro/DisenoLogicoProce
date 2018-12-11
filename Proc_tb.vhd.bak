@@ -38,8 +38,24 @@ begin
 
   Passert: process
   begin
-    wait for 1200 ns;
-    --assert output = "00000000" report "Error al inducir rst" severity failure;
+    wait for 90 ns;
+      assert output = "00000000" report "Error al obtener salida bloqueada" severity failure;
+    wait for delay;
+      assert output = "00101101" report "Error al obtener r3" severity failure;
+    wait for delay;
+      assert output = "01011010" report "Error al obtener r4" severity failure;
+    wait for delay;
+      assert output = "00101101" report "Error al obtener r5" severity failure;
+    wait for delay;
+      assert output = "01111111" report "Error al obtener r6" severity failure;
+    wait for delay;
+      assert output = "00000000" report "Error al obtener r7" severity failure;
+    wait for delay;
+      assert output = "00000000" report "Error al obtener r8" severity failure;
+    wait for delay;
+      assert output = "00000000" report "Error al obtener r13" severity failure;
+    wait for delay;
+      assert output = "00101101" report "Error al obtener r14" severity failure;
     wait;
   end process;
    

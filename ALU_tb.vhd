@@ -12,18 +12,14 @@ architecture behavior of alu_tb is
 	port(
 		    a, b : in  STD_LOGIC_VECTOR (7 downto 0);
         s : out  STD_LOGIC_VECTOR (7 downto 0);
-        op : in  STD_LOGIC_VECTOR (2 downto 0);
-        clk : in STD_LOGIC;
-		    rst : in STD_LOGIC
+        op : in  STD_LOGIC_VECTOR (2 downto 0)
 		);
 	end component;
 
 	-- señales de estímulo
 	signal a :  STD_LOGIC_VECTOR (7 downto 0) := "10110100";
 	signal b :  STD_LOGIC_VECTOR (7 downto 0) := "10001010";
-  signal op : STD_LOGIC_VECTOR (2 downto 0) := "110";
-  signal clk :  STD_LOGIC := '0';
-	signal rst :  STD_LOGIC := '0';
+  signal op : STD_LOGIC_VECTOR (2 downto 0) := "000";
 	
 	-- señales a observar
 	signal s:  std_logic_vector(7 downto 0);
@@ -37,25 +33,18 @@ begin
 		a => a,
 		b => b,
 		s => s,
-		op => op,
-		clk => clk,
-		rst => rst
+		op => op
 	);
 
    Pop: process 
    begin
-      op <= op + 1; 
       wait for delay;
+      op <= op + 1;
    end process;
    
   Passert: process(s)
   begin
-    if rst = '1' then
-      assert s = "00000000" report "Error al inducir rst" severity failure;
-    else
       case op is
-        when "000" =>
-          assert s = a report "Error al asignar s <= a" severity failure;
         when "001" =>
           assert s = (a(6 downto 0) & '0') report "Error al asignar s <= a sll 1" severity failure;
         when "010" =>
@@ -73,27 +62,6 @@ begin
         when others =>
           assert s = a report "Error al asignar s <= a" severity failure;
         end case;
-    end if;
    end process;
-   
-   Pclk: process 
-   begin
-      clk <= '0';
-      wait for delay/2;
-      clk <= '1';
-      wait for delay/2;
-   end process;       
-   
-   PRst: process 
-   begin
-      rst <= '1'; 
-      wait for delay;
-      rst <= '0';     
-      wait for delay*16;
-      rst <= '1'; 
-      wait for delay;
-      rst <= '0';     
-      wait;
-   end process; 
 
 end;

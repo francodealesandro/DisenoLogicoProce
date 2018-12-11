@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_UNSIGNED.all;
 entity alu is
     port ( a : in  STD_LOGIC_VECTOR (7 downto 0);
            b : in  STD_LOGIC_VECTOR (7 downto 0);
-           s : out  STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
+           s : out  STD_LOGIC_VECTOR (7 downto 0);
            op : in  STD_LOGIC_VECTOR (2 downto 0));
 end alu;
 
