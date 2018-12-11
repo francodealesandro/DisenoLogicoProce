@@ -1,4 +1,35 @@
-{D:/vhDL Procesador/Proc.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Proc.vhd}
+{D:/vhDL Procesador/ROM_prog.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\ROM_prog.vhd}
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity rom_prog
+-- Compiling architecture rom_arq of rom_prog
+
+} {} {}} {D:/vhDL Procesador/ALU_tb.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ALU_tb.vhd}
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity alu_tb
+-- Compiling architecture behavior of alu_tb
+
+} {} {}} {D:/vhDL Procesador/Regs.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Regs.vhd}
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity regs
+-- Compiling architecture registers_table_arq of regs
+
+} {} {}} {D:/vhDL Procesador/Proc.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Proc.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -16,7 +47,27 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Compiling entity decode
 -- Compiling architecture decode_arq of decode
 
-} {} {}} {D:/vhDL Procesador/Proc_tb.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Proc_tb.vhd}
+} {} {}} {D:/vhDL Procesador/Reg_out.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Reg_out.vhd}
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity reg_out
+-- Compiling architecture reg_out_arq of reg_out
+
+} {} {}} {D:/vhDL Procesador/Reg_A.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Reg_A.vhd}
+Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity reg_a
+-- Compiling architecture reg_a_arq of reg_a
+
+} {} {}} {D:/vhDL Procesador/Proc_tb.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Proc_tb.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -27,27 +78,7 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Compiling entity proc_tb
 -- Compiling architecture proc_behavior of proc_tb
 
-} {} {}} {D:/vhDL Procesador/Reg_out.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Reg_out.vhd}
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity reg_out
--- Compiling architecture reg_out_arq of reg_out
-
-} {} {}} {D:/vhDL Procesador/Regs.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/Regs.vhd}
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity regs
--- Compiling architecture registers_table_arq of regs
-
-} {} {}} {D:/vhDL Procesador/ALU.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\ALU.vhd}
+} {} {}} {D:/vhDL Procesador/ALU.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ALU.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -56,26 +87,6 @@ Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity alu
 -- Compiling architecture arq of alu
-
-} {} {}} {D:/vhDL Procesador/ROM.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/ROM.vhd}
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity rom_prog
--- Compiling architecture rom_arq of rom_prog
-
-} {} {}} {D:/vhDL Procesador/Reg.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:\vhDL Procesador\Reg.vhd}
-Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity reg_a
--- Compiling architecture reg_a_arq of reg_a
 
 } {} {}} {D:/vhDL Procesador/PC.vhd} {1 {vcom -work work -2002 -explicit -vopt {D:/vhDL Procesador/PC.vhd}
 Model Technology ModelSim SE-64 vcom 10.0d Compiler 2011.10 Oct 30 2011
