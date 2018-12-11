@@ -19,7 +19,7 @@ architecture proc_behavior of proc_tb is
 
 	-- Señales de estímulo
 	signal clk, rst : STD_LOGIC := '0';
-  signal input : STD_LOGIC_VECTOR (7 downto 0) := (others => '1');
+  signal input : STD_LOGIC_VECTOR (7 downto 0) := "00101101"; --(others => '1');
   
 	-- Señales a observar
 	signal output : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
@@ -38,26 +38,10 @@ begin
 
   Passert: process
   begin
-    wait for delay*3;
+    wait for 600 ns;
     --assert output = "00000000" report "Error al inducir rst" severity failure;
-    wait for delay*8;
-    --assert output = "11111111" report "Instruccion 7: r3" severity failure;
-    wait for delay;
-    --assert output = "11111110" report "Instruccion 8: r4" severity failure;
-    wait for delay;
-    --assert output = "00000001" report "Instruccion 9: r5" severity failure;
-    wait for delay;
-    --assert output = "11111111" report "Instruccion 10: r6" severity failure;
-    wait for delay;
-    --assert output = "00000000" report "Instruccion 11: r7" severity failure;
-    wait for delay;
-    --assert output = "00000000" report "Instruccion 12: r8" severity failure;
-    wait for delay;
-    --assert output = "00000000" report "Instruccion 13: r13" severity failure;
-    wait for delay;
-    --assert output = "11111111" report "Instruccion 14: r14" severity failure;
     wait;
-   end process;
+  end process;
    
    Pclk: process 
    begin

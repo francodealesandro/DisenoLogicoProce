@@ -16,9 +16,9 @@ architecture rom_arq of rom_prog is
 	    "0000010000000011", --lda r3
 	    "0001000001000011", --add r4 r3
 	    "0001000101010100", --sub r5 r4
-	    "0001001001100100", --or r6 r4
-	    "0001001101110000", --and r7 r0
-	    "0001010011100100", --mov r14 r4
+	    "0001001101100100", --or r6 r4
+	    "0001001001110000", --and r7 r0
+	    "0000000111100100", --mov r14 r4
 	    "0000001000000011", --out r3
 	    "0000001000000100", --out r4
 	    "0000001000000101", --out r5
@@ -26,11 +26,11 @@ architecture rom_arq of rom_prog is
 	    "0000001000001000", --out r7
 	    "0000001000001001", --out r8
 	    "0000001000001101", --out r13
-	    "0000001000001110" --out r14
+	    "0000001000001110"  --out r14
     );
     
 begin
   
-    output <= ROM(conv_integer(addr)) when addr <= 1111 else (others => '0');
+    output <= ROM(conv_integer(addr)) when addr <= (rom_tam-1) else (others => '0');
     
 end rom_arq;

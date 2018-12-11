@@ -6,7 +6,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity proc_tb is
 end proc_tb;
 
-architecture behavior of proc_tb is 
+architecture proc_behavior of proc_tb is 
 
 	component proc
 	port(
@@ -19,7 +19,7 @@ architecture behavior of proc_tb is
 
 	-- Señales de estímulo
 	signal clk, rst : STD_LOGIC := '0';
-  signal input : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
+  signal input : STD_LOGIC_VECTOR (7 downto 0) := "00101101"; --(others => '1');
   
 	-- Señales a observar
 	signal output : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
@@ -36,14 +36,12 @@ begin
 		rst => rst
 	);
 
-  Passert: process(output)
+  Passert: process
   begin
-    if rst = '1' then
-      assert output = "00000000" report "Error al inducir rst" severity failure;
-    else
-      
-    end if;
-   end process;
+    wait for 1200 ns;
+    --assert output = "00000000" report "Error al inducir rst" severity failure;
+    wait;
+  end process;
    
    Pclk: process 
    begin
@@ -55,8 +53,6 @@ begin
    
    PRst: process 
    begin
-      rst <= '0';     
-      wait for delay;
       rst <= '1'; 
       wait for delay;
       rst <= '0';     
