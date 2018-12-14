@@ -55,7 +55,7 @@ begin
     wait for delay;
       assert output = "00000000" report "Error al obtener r13" severity failure;
     wait for delay;
-      assert output = "00101101" report "Error al obtener r14" severity failure;
+      assert output = "01011010" report "Error al obtener r14" severity failure;
     wait;
   end process;
    
